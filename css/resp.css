@@ -1,0 +1,55 @@
+.media-display {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  color: navy;
+  font-weight: bold;
+  padding: 0 2px;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .media-display::before {
+    content: "default";
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .media-display::before {
+    content: "max-width: 700px";
+    display: ;
+  }
+
+  .main {
+    width: 90%;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "article"
+      "image";
+    row-gap: 20px;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+  }
+}
+
+/*
+@media screen and (max-width: 768px) {
+  .media-display::before {
+    content: "max-width: 768px";
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .media-display::before {
+    content: "max-width: 414px";
+  }
+}
+*/

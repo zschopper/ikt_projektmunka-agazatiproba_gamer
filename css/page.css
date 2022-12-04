@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/kepek/black.png);
+  background-size: cover;
+  font-family: Arial, Verdana, sans-serif;
+  color: beige;
+  font-size: 10pt;
+}
+
+.main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+header {
+  height: 300px;
+  background-image: url(/kepek/game.jpg);
+  background-size: cover;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 120px;
+  list-style-type: none;
+  border-bottom: solid 2px grey;
+}
+
+nav ul li {
+  padding: 10px;
+  border-right: solid grey 1px;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li.active {
+  background-color: #ff7e00;
+}
+
+nav li:hover {
+  background-color: orange;
+}
+
+.content {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "title title"
+    "article image";
+  padding: 20px;
+}
+
+.content .title {
+  grid-area: title;
+}
+
+.content .article {
+  grid-area: article;
+}
+
+.content .image {
+  grid-area: image;
+}
+
+.content .image img {
+  width: 100%;
+}
+
+.article h1 {
+  font-size: 15px;
+}
+.article p {
+  text-align: justify;
+  font-size: 10px;
+}
+footer {
+  background-color: #fea500;
+}
+
+footer .copy {
+  text-align: center;
+}
+
+.article ul {
+  display: block;
+  list-style-type: square;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.article table {
+  border-collapse: collapse;
+}
+
+.article td,
+.article th {
+  border: 1px solid #111;
+  padding: 2px 10px;
+}
+
+.article th {
+  color: beige;
+  background-color: #111;
+}
+
+.article tbody tr:hover {
+  background-color: #ffa50010;
+}
+
+tr:nth-child(even) {
+  background-color: #00000020;
+}
